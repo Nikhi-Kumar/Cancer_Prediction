@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="{{ 'bg-red-600' if prediction == 1 else 'bg-green-600' }} min-h-screen flex items-center justify-center px-4">
+  <div class="bg-white p-10 rounded-3xl shadow-2xl text-center max-w-xl w-full">
+    <h1 class="text-3xl font-bold mb-6 text-indigo-700">Cancer Risk Result</h1>
+    <p class="text-2xl font-bold mb-4 {{ 'text-red-600' if prediction == 1 else 'text-green-600' }}">
+      {{ 'High Risk of Cancer' if prediction == 1 else 'Low Risk of Cancer' }}
+    </p>
+    <p class="text-gray-700">Based on your inputs, this is an estimated prediction using a machine learning model.</p>
+    <p class="text-sm text-gray-500 mt-4">Please consult a doctor for clinical diagnosis.</p>
+  </div>
+</body>
+</html>

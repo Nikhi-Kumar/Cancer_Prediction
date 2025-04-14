@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancer Risk Predictor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-200 min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-3xl bg-white shadow-xl rounded-3xl p-10">
+    <h1 class="text-4xl font-extrabold text-center text-indigo-800 mb-10">Cancer Risk Prediction</h1>
+
+    <form action="/predict" method="post" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <input type="number" name="age" placeholder="Age" class="p-3 border border-indigo-300 rounded-xl" required>
+
+      <select name="gender" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+      </select>
+
+      <input type="number" step="0.1" name="bmi" placeholder="BMI" class="p-3 border border-indigo-300 rounded-xl" required>
+
+      <select name="smoking" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Smoking?</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <select name="genetic_risk" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Genetic Risk</option>
+        <option value="0">Low</option>
+        <option value="1">Medium</option>
+        <option value="2">High</option>
+      </select>
+
+      <input type="number" step="0.1" name="physical_activity" placeholder="Physical Activity (hrs/week)" class="p-3 border border-indigo-300 rounded-xl" required>
+
+      <select name="alcohol_intake" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Alcohol Intake</option>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+
+      <select name="family_history" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Family Cancer History</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <select name="diet_type" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Diet Type</option>
+        <option value="Unhealthy">Unhealthy</option>
+        <option value="Average">Average</option>
+        <option value="Healthy">Healthy</option>
+      </select>
+
+      <select name="stress_levels" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Stress Level</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <input type="number" step="0.1" name="sleep_hours" placeholder="Sleep Hours" class="p-3 border border-indigo-300 rounded-xl" required>
+
+      <select name="radiation_exposure" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Radiation Exposure</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <select name="occupation_type" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Occupation</option>
+        <option value="Sedentary">Sedentary</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Heavy">Heavy</option>
+      </select>
+
+      <select name="blood_pressure" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Blood Pressure</option>
+        <option value="Low">Low</option>
+        <option value="Normal">Normal</option>
+        <option value="High">High</option>
+      </select>
+
+      <select name="diabetes_history" class="p-3 border border-indigo-300 rounded-xl" required>
+        <option value="" disabled selected>Diabetes History</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <div class="col-span-1 sm:col-span-2 text-center mt-4">
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-xl transition duration-300">
+          Predict Cancer Risk
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
